@@ -1,0 +1,22 @@
+Two Sum: -> Dificultad Fácil.
+Descripción:
+Dado un arreglo de números enteros y un objetivo entero, retornar los indices de los dos números que al sumarse den como resultado el objetivo. 
+Debes asumir que solo existe una solución, y que no deberías usar elementos repetidos.
+Puedes retornar la respuesta en cualquier orden.
+
+Resolución:
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        for (int e = 0; e<nums.length; e++) {
+            for(int f = 1; f<nums.length; f++) {
+                if((e!=f)) {
+                    if(((nums[e]+nums[f]) == target)) {
+                    return new int[] {e, f}; 
+                }
+                    }
+            }
+        }
+        return new int[] {};
+    }
+}
