@@ -1,0 +1,24 @@
+Palindrome Number (Java) -> Fácil
+Descripción
+Dado un entero x, retornar un valor 'true' si x es un palindrome, y 'false' si no lo es.
+
+Ejemplo:
+input = 121
+Output = true
+
+input = -232
+output = false
+
+Resolución:
+class Solution {
+    public boolean isPalindrome(int x) {
+    String str = Integer.toString(x);
+    int n = str.length();
+    for (int f = 0; f<n/2; f++) {
+        if(str.charAt(f) != str.charAt(n-f-1))
+        return false;
+    }
+        return true;
+    }
+}
+
